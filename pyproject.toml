@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "churn-time-to-event"
+version = "0.1.0"
+description = "Kaplan-Meier and Cox models for time to next purchase (CH03) on Online Retail II."
+requires-python = ">=3.11"
+dependencies = [
+    "pandas==3.1.1",
+    "numpy==2.5.4",
+    "scikit-learn==1.9.1",
+    "scipy==1.18.1",
+    "matplotlib==3.11.2",
+    "seaborn==0.13.2",
+    "openpyxl==3.1.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
